@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* VARIABLES */
+:root {
+    --verde: #087b2b;
+    --verde-claro: #eaf5ed;
+    --azul: #09256f;
+    --rojo: #df0010;
+    --tinta: #17231b;
+    --gris: #65716a;
+    --fondo: #fbfcfa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--tinta);
+    background: var(--fondo);
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+.seccion {
+    padding: 95px clamp(24px, 9vw, 140px);
+}
+
+.titulo-seccion h2,
+.contacto h2 {
+    font: 800 clamp(30px, 3.3vw, 44px)/1.15 Manrope, sans-serif;
+    letter-spacing: -1.5px;
+    margin: 14px 0 0;
+}
+
+.sobrelinea {
+    color: var(--verde);
+    font-size: 12px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    min-height: 102px;
+    padding: 14px clamp(22px, 6vw, 88px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    background: #fff;
+    border-bottom: 1px solid #edf0ec;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 240px;
+    font-family: Manrope, sans-serif;
+    font-size: 16px;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.marca img {
+    width: 92px;
+    height: 92px;
+    object-fit: contain;
+}
+
+.marca strong {
+    display: block;
+    font-size: 21px;
+}
+
+.marca small {
+    display: block;
+    text-transform: none;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+/* NAVEGACIÓN */
+nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2.2vw, 32px);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+nav a {
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--verde);
+}
+
+nav .nav-contacto {
+    background: var(--verde);
+    color: #fff;
+    padding: 12px 19px;
+    border-radius: 30px;
+}
+
+nav .nav-contacto:hover {
+    background: var(--azul);
+    color: #fff;
+}
+
+/* PORTADA */
+.portada {
+    min-height: 570px;
+    padding: 75px clamp(24px, 8vw, 120px);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+    background: #fff;
+}
+
+.portada-contenido {
+    max-width: 600px;
+}
+
+.portada h1 {
+    color: var(--azul);
+    font: 800 clamp(38px, 4.5vw, 58px)/1.15 Manrope, sans-serif;
+    letter-spacing: -2px;
+    margin: 20px 0;
+}
+
+.portada-contenido p {
+    color: var(--gris);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.portada-imagen {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 28px;
+    -webkit-mask-image: radial-gradient(ellipse 78% 76% at 50% 50%, #000 66%, transparent 100%);
+    mask-image: radial-gradient(ellipse 78% 76% at 50% 50%, #000 66%, transparent 100%);
+}
+
+.portada-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 22px;
+    color: #fff;
+    background: var(--verde);
+    border-radius: 30px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.boton:hover {
+    background: var(--azul);
+}
+
+/* ELEMENTOS ORTOPÉDICOS */
+.elementos {
+    background: #f5f8f5;
+}
+
+.centrado {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 42px;
+}
+
+.centrado p {
+    color: var(--gris);
+    margin: 14px 0 0;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.elemento {
+    background: #fff;
+    border: 1px solid #e9eee9;
+    border-radius: 17px;
+    padding: 17px;
+    text-align: center;
+    box-shadow: 0 8px 24px #163b1c08;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.elemento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px #163b1c12;
+}
+
+.elemento img {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+}
+
+.elemento h3 {
+    font: 700 15px Manrope, sans-serif;
+    margin: 12px 0 3px;
+}
+
+.aclaracion {
+    margin: 28px auto 0;
+    text-align: center;
+    color: var(--gris);
+    font-size: 13px;
+}
+
+/* FERIA DE MODA CIRCULAR */
+.feria {
+    padding: 85px clamp(24px, 9vw, 140px);
+    background: #fff;
+}
+
+.feria-tarjeta {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: clamp(24px, 4vw, 48px);
+    border-radius: 26px;
+    border: 1px solid #e4ece5;
+    box-shadow: 0 18px 42px rgba(23, 35, 27, 0.08);
+    overflow: hidden;
+    background-color: var(--verde-claro);
+    background-image: url('imagenes/Moda.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.feria-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+}
+
+.feria-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--verde);
+    border: 1.5px solid #cde4d2;
+    font: 800 13px Manrope, sans-serif;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 14px rgba(8, 123, 43, 0.1);
+}
+
+.feria-cuerpo {
+    max-width: 740px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.589);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: clamp(24px, 4vw, 38px) clamp(20px, 4vw, 44px);
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 32px rgba(23, 35, 27, 0.08);
+}
+
+.feria-cuerpo h2 {
+    color: var(--azul);
+    font: 800 clamp(32px, 4.2vw, 50px)/1.1 Manrope, sans-serif;
+    letter-spacing: -1.5px;
+    margin: 10px 0 14px;
+}
+
+.feria-cuerpo p {
+    color: var(--tinta);
+    font-size: clamp(15px, 1.4vw, 17px);
+    line-height: 1.65;
+    margin: 0 auto 28px;
+    max-width: 580px;
+}
+
+.feria-nota {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--gris);
+}
+
+.feria-datos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    text-align: left;
+}
+
+.feria-dato {
+    background: #fff;
+    border: 1px solid #dfeae1;
+    border-radius: 16px;
+    padding: 15px 18px;
+}
+
+.feria-dato small {
+    display: block;
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.feria-dato strong {
+    color: var(--tinta);
+    font: 700 15px Manrope, sans-serif;
+}
+
+/* CONTACTO */
+.contacto {
+    padding: 85px clamp(24px, 9vw, 140px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+    align-items: center;
+    background: #fff;
+}
+
+.contacto-intro p {
+    color: var(--gris);
+    line-height: 1.7;
+    max-width: 460px;
+    margin-top: 18px;
+}
+
+.datos-contacto {
+    display: grid;
+    gap: 15px;
+}
+
+.dato {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 17px 20px;
+    border: 1px solid #e8eee8;
+    border-radius: 15px;
+}
+
+.dato-icono {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    color: var(--verde);
+    background: var(--verde-claro);
+    font-size: 23px;
+}
+
+.dato small {
+    display: block;
+    color: var(--gris);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.dato strong {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    padding: 35px 24px;
+    text-align: center;
+    color: #e8f0e9;
+    background: #10291a;
+}
+
+.footer-marca {
+    font: 700 18px Manrope, sans-serif;
+    text-transform: uppercase;
+}
+
+.footer-marca strong {
+    color: #8ed09b;
+}
+
+footer p {
+    color: #b7c8bb;
+    font-size: 13px;
+    margin: 8px 0 18px;
+}
+
+footer small {
+    color: #8da294;
+    font-size: 11px;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+    .encabezado {
+        flex-direction: column;
+        padding: 12px 20px 16px;
+        gap: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .contacto {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 700px) {
+    .portada {
+        grid-template-columns: 1fr;
+        padding: 55px 24px;
+        gap: 25px;
+    }
+
+    .portada-imagen {
+        max-width: 420px;
+        margin: auto;
+    }
+
+    .feria {
+        padding: 65px 22px;
+    }
+
+    .feria-datos {
+        grid-template-columns: 1fr;
+    }
+
+    .feria-cuerpo {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .marca img {
+        width: 72px;
+        height: 72px;
+    }
+
+    nav {
+        font-size: 11px;
+    }
+
+    nav .nav-contacto {
+        padding: 9px 13px;
+    }
+
+    .seccion,
+    .contacto {
+        padding: 65px 22px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .elemento {
+        padding: 10px;
+    }
+
+    .elemento img {
+        height: 125px;
+    }
+
+    .elemento h3 {
+        font-size: 12px;
+    }
+}
